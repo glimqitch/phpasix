@@ -14,15 +14,15 @@
                 echo $x.$hola;
                 echo "Resultat:" . $y + $p;
 
-//            $books = [
-//                    "Dune",
-//               "The Hobbit",
-//             "The Lord of the Rings: The fellowship of the ring",
-//           "Harry Potter: The Philosopher's Stone",
-//         "A Song of Ice and Fire: A Game of Thrones",
-//       "Foundation",
-//     "Do Androids Dreams of Electric Sheep?"
-//                ]
+            $books2 = [
+                    "Dune",
+               "The Hobbit",
+             "The Lord of the Rings: The fellowship of the ring",
+           "Harry Potter: The Philosopher's Stone",
+         "A Song of Ice and Fire: A Game of Thrones",
+       "Foundation",
+     "Do Androids Dreams of Electric Sheep?"
+                ];
              $books = [
                          [
                              "name" => "Dune",
@@ -60,14 +60,53 @@
                          "releaseYear" => "1968"
                      ]
                  ];
+             function filterByAuthor($books, $author) {
+                 $filteredAuthors = [];
+                 foreach ($books as $book) {
+                     if ($book["author"] == $author) {
+                         $filteredAuthors[] = $book;
+                     }
+                 }
+                 return $filteredAuthors;
+             }
+
+            function filterByYear($books) {
+                $filteredYear = [];
+                foreach ($books as $book) {
+                    if ($book["releaseYear"] >= 1990) {
+                        $filteredYear[] = $book;
+                    }
+                }
+                return $filteredYear;
+            }
+
+            $filteredBooksyear = array_filter($books, function ($book){
+                return $book["releaseYear"] >= 1950 && $book["releaseYear"] <= 1996;
+            });
             ?>
         </h1>
         <hr>
-        <p><b>Llista de pelis:</b></p>
+        <p><b>Llista de llibres:</b></p>
         <ul>
-            <?php foreach($books as $book) : ?>
-                <li><?= $book?></li>
+            <?php foreach($books2 as $book) : ?>
+                <li><?= $book ?></li>
             <?php endforeach; ?>
         </ul>
+        <p><b>Llista de llibres de Tolkien en filtre:</b></p>
+        <ul>
+            <?php foreach(filterByAuthor($books, "J. R. R. Tolkien") as $book) : ?>
+                <li><?= $book['name']?> (<?= $book['releaseYear']?>) - By <?= $book['author']?></li>
+            <?php endforeach; ?>
+        </ul>
+        <p><b>Llista de llibres a partir del 1990:</b></p>
+        <?php foreach(filterByYear($books) as $book) : ?>
+            <li><?= $book['name']?> (<?= $book['releaseYear']?>) - By <?= $book['author']?></li>
+        <?php endforeach; ?>
+
+        <p><b>Llista de llibres entre 1950 i 1996:</b></p>
+        <?php foreach($filteredBooksyear as $book) : ?>
+            <li><?= $book['name']?> (<?= $book['releaseYear']?>) - By <?= $book['author']?></li>
+        <?php endforeach; ?>
+
     </body>
 </html>
