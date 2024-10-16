@@ -10,7 +10,7 @@
                 $x= "Hello World<br>";
                 $y=5;
                 $p=9;
-                $hola="<br>Sóc Iris i tinc uns ulls molt bonics<br><br>";
+                $hola="<br>Sóc Iris i tinc els ulls molt bonics<br><br>";
                 echo $x.$hola;
                 echo "Resultat:" . $y + $p;
 

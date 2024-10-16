@@ -1,0 +1,20 @@
+{
+    "name": "glimqitch/phpasix",
+    "description": "Projecte PHP Asix",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Glimqitch\\Phpasix\\": "Core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "iris",
+            "email": "irismariaqueralt@iesebre.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
