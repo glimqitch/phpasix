@@ -3,7 +3,7 @@
         'name' => 'glimqitch/phpasix',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '7c0a0f310e99101bba78a83374c774c4e75c4135',
+        'reference' => 'd42614ea3a43e336f273c05557190ed41b9b66be',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'glimqitch/phpasix' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '7c0a0f310e99101bba78a83374c774c4e75c4135',
+            'reference' => 'd42614ea3a43e336f273c05557190ed41b9b66be',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
