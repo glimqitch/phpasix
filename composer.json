@@ -5,8 +5,11 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Glimqitch\\Phpasix\\": "Core/"
-        }
+            "Core\\": "Core/"
+        },
+        "files" : [
+            "Core/helpers.php"
+        ]
     },
     "authors": [
         {
