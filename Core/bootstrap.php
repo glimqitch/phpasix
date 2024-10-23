@@ -9,8 +9,8 @@ use Core\Route;
 
 $routes= require '../routes.php';
 
-//$dotenv= Dotenv::createImmutable(__DIR__.'/..');
-//$dotenv->load();
+$dotenv= Dotenv::createImmutable(__DIR__.'/..');
+$dotenv->load();
 
 App::bind('config', require '../config.php');
 
